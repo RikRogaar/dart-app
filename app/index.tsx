@@ -1,15 +1,12 @@
-import { StyleSheet, Text, View } from "react-native";
+import { router } from 'expo-router'
+import { View, Button } from 'tamagui'
 
-export default function Page() {
+export default function index() {
+  const goToMatch = () => router.navigate('/match');
+
   return (
-    <View style={styles.container}>
-      <Text>hello</Text>
+    <View margin="auto">
+        <Button size="$6" onPress={goToMatch}>Go to screen</Button>
     </View>
-  );
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    color: '#fff'
-  }
-});
